@@ -107,6 +107,39 @@ You can set default permissions for all members of your organisation.
 - **Member** Same as an organisation member.
 - **Billing Manager** Can only view billing information and add other billing managers.
 
+## GitHub Products and Licensing
 
+This section will run throught the different products that GitHub offers and the appropriate licensing and costs for each product.
+
+### Products
+
+- **GitHub Free** - The GitHub that GitHub is most known for; anyone can create an account and use. Features include:
+  - Unlimited public/private repos
+  - 2,000 GitHub Actions/Actions automation minutes per month. Free for public repos
+  - 500MB of GitHub Packages/packages storage. Free for public repos
+  - Two-factor authenitcation
+  - Dependabot alerts
+- **GitHub Pro** - Same as free hut with some updated features. Still uses personal accounts but you get the following advanced features:
+  - GitHub support via email
+  - Required pull request reviewers
+  - Multiple pull request reviewers
+  - Auto-linked references
+  - GitHub Pages
+  - Wikis
+  - Protected branches
+  - Code owners
+  - Repository insights graphs
+  - GitHub Actions limit increased to 3,000 minutes
+  - GitHub Packages limit increased to 2GB
+- **GitHub Team** - Pro but with added features for teams instead of personal accounts. Added features are:
+  - Draft pull requests
+  - Team pull reques reviewers
+  - Scheduled reminders
+- **Github Enterprise** - 
+
+There are 3 different kinds of accounts for the GitHub products listed:
+- Personal User Accounts
+- Organisation Accounts
+- Enterprise Accounts
 
 
