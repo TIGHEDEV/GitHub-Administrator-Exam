@@ -74,4 +74,39 @@ Organisation "owner" permissions allows you to do these activities:
 6. SAML SSO (Security Assertion Markup Language)
 7. LDAP (Lightweight Directory Access Protocol)
 
+## GitHub Permissions
+
+### Repository Permissions
+
+- **Read** For people who need to see the code but not interact with it
+- **Triage** For people who proactively manage issyes amd pull requests but do not need write permissions
+- **Write** For the standard developer and people who actively contribute to your project
+- **Maintain** For project managers. Does not provide access to sensitive or destruvtive actions
+- **Admin** For people who need full access to the project
+
+Repository permissions can be be applied to organisation members, external collaborators and teams. 
+
+### Team permissions
+
+Permissions will cascade through teams that have child teams. Therefore you can apply repository permissions to a parent team that will benfit child teams of that parent. Make sure to only apply the right level of permissions to the parent team and then be more specific with child team permissions.
+
+- **Member** Same set of abilites as organisation members
+- **Maintainer** Is a team admin essentially. Abilities include: request team change parent and child teams; edit team discussions; and and remove members; give maintatner permission to other users; manage access to repositories; manage code review assignment and scheduled reminders for pull requests. An organisation owner can also prmote someone to become a maintainer. 
+
+### Organisation Permissions
+
+- **Owner** Can add or remove users to and from the organisation and do everything organisation members can do.
+- **Member** Can create and manage organisation repositories and teams.
+- **Billing Manager** Can only view and edit billing information.
+
+You can set default permissions for all members of your organisation.
+
+### Enterprise Permissions
+
+- **Owner** The ultimate admin, can do everything!
+- **Member** Same as an organisation member.
+- **Billing Manager** Can only view billing information and add other billing managers.
+
+
+
 
