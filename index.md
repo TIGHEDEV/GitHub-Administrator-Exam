@@ -137,6 +137,8 @@ This section will run throught the different products that GitHub offers and the
   - Scheduled reminders
 - **Github Enterprise** - 
 
+![Pricing Comparison](Pricing Comparison Screenshot.png)
+
 There are 3 different kinds of accounts for the GitHub products listed:
 - Personal User Accounts
 - Organisation Accounts
