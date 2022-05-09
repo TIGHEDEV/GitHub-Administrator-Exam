@@ -35,3 +35,31 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+# GitHub Enterprise Revision guide
+
+## GitHub Administration
+
+### Administration levels
+
+1. Organisation
+2. Teams - these can and should be nested
+3. User
+
+### Sync your GitHub team with your identity provider.
+
+If using AzureAD, changes in AD will be reflected in GitHub.
+
+### Organisation level administration
+
+Organisation "owner" permissions allows you to do these activities:
+- Invite and remove members from an organisation
+- Place users into teams and grant "team maintaner" permissions to users
+- Add or remover external collaborators
+- Grant repository permission levels
+- Set up organisation security
+- Use customer scripts to get extra info from the repositories and apply migrations/organisation-wide changes.
+
+
+
+
