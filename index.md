@@ -38,7 +38,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 -->
 # GitHub Enterprise Revision guide
 
-This revision guide is based off the content from the MS [Learn path:] (https://docs.microsoft.com/en-us/learn/paths/github-administration-products/) and content from the learning paths at the following [site:] (https://docs.microsoft.com/en-us/users/githubtraining/collections/mom7u1gzjdxw03)
+This revision guide is based off the content from the MS [Learn path:](https://docs.microsoft.com/en-us/learn/paths/github-administration-products/) and content from the learning paths at the following [site:](https://docs.microsoft.com/en-us/users/githubtraining/collections/mom7u1gzjdxw03)
 
 ## GitHub Administration
 
