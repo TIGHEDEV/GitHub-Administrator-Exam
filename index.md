@@ -62,6 +62,16 @@ Organisation "owner" permissions allows you to do these activities:
 - Set up organisation security
 - Use customer scripts to get extra info from the repositories and apply migrations/organisation-wide changes.
 
+## GitHub Authentication
 
+### Authenitcation Options
+
+1. Username and password
+2. Personal Access Tokens
+3. SSH Keys
+4. Deploy Keys
+5. MFA
+6. SAML SSO (Security Assertion Markup Language)
+7. LDAP (Lightweight Directory Access Protocol)
 
 
