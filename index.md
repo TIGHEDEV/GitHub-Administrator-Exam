@@ -135,7 +135,16 @@ This section will run throught the different products that GitHub offers and the
   - Draft pull requests
   - Team pull reques reviewers
   - Scheduled reminders
-- **Github Enterprise** - 
+- **Github Enterprise** - The full works! Can be hosted on-premise or in the GitHub cloud. GH Enterprise includes the following additional:
+  - GitHub Enterprise Support
+  - More security, compliance and deployment controls
+  - SAML SSO support
+  - Access provisioning with SAML or SCIM
+  - GitHub Connect
+  - Option to purchase GitHub Advanced Security
+  - GH Enterprise Cloud includes 50,000 GitHub Actions minutes
+  - GH Enterprise Cloud includes 50GB limit for GitHub Packages storage
+  - GH Enterpise Cloud also has a 99.9% SLA, centralize billing options and access control for GitHub Pages. 
 
 ![Pricing Comparison](https://user-images.githubusercontent.com/73177811/167446586-cb001853-b4c5-42e3-9d92-bc87433e35db.png)
 
