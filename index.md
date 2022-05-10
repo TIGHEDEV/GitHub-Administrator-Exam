@@ -74,6 +74,28 @@ Organisation "owner" permissions allows you to do these activities:
 6. SAML SSO (Security Assertion Markup Language)
 7. LDAP (Lightweight Directory Access Protocol)
 
+### Identity and Access Managament
+
+- GitHub offers limited support for all identity providers that implement the SAML 2.0 standard.
+- Use SAML SSO to allow users to sign in to all their different services with one set of credentials.
+- Link the GitHub to the IdP so that each user only has access to what they are supposed to.
+
+### User Authenitcation
+
+- **SAML SSO** and **MFA (2FA)**
+- SAML SSO:
+  - Before enabling SSO the admin needs to connect the GitHub organisation to a supperted IdP.
+  - GitHub redirects a user to the IdP to authenticate when they request access to a resource within an organisation that use SAML SSO
+  - The IdP will redirect the member back to GitHub if succesful. They still need to log in to GitHub.
+  - Make sure to check the require SAML SSO authentication option in the settings after SSO has been enabled
+ - MFA (2FA):
+  - You must get users to enable the setting on their account and then also at an organisation level, click the require 2FA setting option. Only when both are done will it work properly.
+  - All accounts that do not use 2FA will be removed from the organisation and lose access. Includes bot accounts.
+  - In GitHub Enterprise there are 3 difrenent ways to implement 2FA:
+    - **Security keys** - Needs TOTP or SMS to have already been done initially. Need to configure a key in your settings, can use a physical key over USB or NFC. This is the most secure form of 2FA
+    - **TOTP (Time-based One Time Passcode)** - GitHub recommends using a cloud-based TOTP app.
+    - **SMS** - not supported by GitHub in all countries
+
 ## GitHub Permissions
 
 ### Repository Permissions
@@ -261,4 +283,31 @@ This section will talk about how to manage GitHub Actions for the enterprise; un
  - **Automated code scanning** can use CodeQL to query code to check for vulnerabilities
  - **Secret scanning** woll look for secrets or credentials that have been commited to your code. By default it happens on public repos and can be configured for private repos.
 
+## GitHub Enterprise Support
+
+### Availability of Support
+
+- GitHub Enterprise Support:
+  - **Monday - Friday**
+  - High-level issues initial response within **8 hours**
+  - Urgent-level issues initial reponse within **8 hours**
+- GitHub Enterprise Support:
+  - Available **every day**
+  - High-level issues initial response within **4 hours**
+  - Urgent-level issues initial reponse within **30 minutes**
+- There is support for 3 different types of problems:
+  - **Account** - user locked out of their account and cannot get access to the 2FA keys.
+  - **Security** - Threat actors hacking an account. GitHub can provide support by rolling back damage to organisation repos and settings
+  - **Abuse** - Reponding to violations of the site's terms of service or organisational policies in GitHub social setting. E.g someone abusing someone through GitHub's communication features. Support can help ban users.
+
+### Creating and assigning priority to tickets
+
+- Types of priority for a ticket are:
+  - **Urgent** - tickets report critical system failure
+  - **High** - tickets report problems impacting business operations or critical bugs. 
+  - **Normal** - tickets request account recovery or spam unflagging, report user login issues and non-critical bugs.
+  - **Low** - tickets ask general questions and submit requests for new features, purchases, training, or health checks.
+ - When creating a ticket, try to include information like the exact error message, steps to reproduce the error and any special circumstances about the discovery of the error.
+
+**Image of support plan comparison to be added here**
 
