@@ -153,4 +153,77 @@ There are 3 different kinds of accounts for the GitHub products listed:
 - Organisation Accounts
 - Enterprise Accounts
 
+### GitHub Actions licensing
 
+- When running GitHub Actions, if you use a windows runner then you are charged double what the minutes are. 
+- If you are using mac as your runner, you are charged 10x the number of minutes you actually consume. 
+- Linux is 1 to 1. 
+- You cannot roll over minutes each month.
+
+### GitHub Packages Licensing
+
+- Storage used is determined by the combination of Actions artifacts and packages. 
+- Storage is calculated based on hourly usage for that month. For example, using 1GB a day for a week would be 1GB * 24hours * 7days then all divided by 744. 
+- Storage is rounded up to the nearest MB. 
+- Spending limits are default $0 so that you can't overspend unless you raise that limit.
+
+### Codespaces Licensing
+
+- Free to use whilst it is in preview. Normally would be charged for compute and storage.
+- After 30 mins of inactivity, the codespace is suspended automatically.
+- Compute costs are charged hourly. There will be 3 Linux instance types
+  - Basic (2 cores, 4GB RAM, 32GB SSD)
+  - Standard (4 cores, 8GB RAM, 32GB SSD)
+  - Premium (8 cores, 16GB RAM, 32GB SSD)
+- Storage costs are monthly until you delete the codespace. Cost is a small fee per GB used per month
+
+## Managing GitHub ACtions
+
+This section will talk about how to manage GitHub Actions for the enterprise; understanding the diffrent features available for your accounts.
+
+### Enterprise Level
+
+- Create a **use policy** to prevent people from using dangerous third-party actions.
+- You can choose whether the policy will apply to all your ogranisations or select organisations.
+- You can choose which actions are allowed: if you want select actions then you can filter actions by actions that are created by GitHub or verified marketplace actions. You can also use a wildcard to specifi=y particular actions.
+
+### Organisation Level
+
+- Make best practices clear for users in your organisation. Provide users with the following best practices documented in a repo everyone has access to:
+  - Repositories for storage
+  - Files/folders naming conventions
+  - Location of shared components
+  - Plans fpr ongoing maintanence
+  - Contribution guidelines
+ - Create workflow templates
+  - You must create a workflow template in the workflow-templates directory in a piblic .github repo.
+  - There are 2 steps to create a template.
+    1. Create a yml workflow file
+    2. Create a json metadata file. This describes how the template should be presented to a user.
+  - The file names must be the same, except for the metadata file it must end in properties.json instead of .yml
+  - Users will be able to find the template you created under the workflows created by your organisation name section in the workflows tab.
+
+### Manage Runners
+
+- There are 2 types of runners: GitHub-hosted and Self-hosted runners
+- Benefits of GitHub-hosted runners:
+  - Automatic updates for the OS, preinstalled packages and tools, and self-hosted runner application
+  - Managed and maintained by GitHub
+  - Clean instance for every job execution
+  - Use free minutes on your GitHub plan, then per-minute rates.
+ - Benefits of Self-hosted runners:
+  - Automatic updates for the self-hosted runner application only.
+  - Can use hardware you've already paid for. Allows for customisable OS, software and security requirements.
+  - Don't need to have a clean insance for every job
+  - Free to use with GitHub Actions, but you are responsible for the cost of your hardware.
+ - You can create self-hosted runner groups to apply rules to runners. For example, you can create a group that only containers runners that are allowed to deploy code to production and then only allow certain organisations access to this group.
+ - Runners are added to the defauly group when created. They can only be in one group at a time.  
+ - You can add custom labels to self-hosted runners. For example, adding a GPU label only to runners that have the correct GPU installed.
+ - You must add IP allowlists in organisation settings if you use IP whitelisting and want to be able to use your self-hosted runners.
+ - To troubleshoot your self-hosted runners there are a few things you can do
+  - Check the status of the runner
+  - Revview the activities and automatic updates of the runner in the Runner_ files in the _diag folder
+  - Review the status of the runner executed in the Worker_ files in the _diag folder
+ 
+ 
+   
