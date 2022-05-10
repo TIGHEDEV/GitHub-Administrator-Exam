@@ -177,7 +177,7 @@ There are 3 different kinds of accounts for the GitHub products listed:
   - Premium (8 cores, 16GB RAM, 32GB SSD)
 - Storage costs are monthly until you delete the codespace. Cost is a small fee per GB used per month
 
-## Managing GitHub ACtions
+## Managing GitHub Actions
 
 This section will talk about how to manage GitHub Actions for the enterprise; understanding the diffrent features available for your accounts.
 
@@ -225,5 +225,40 @@ This section will talk about how to manage GitHub Actions for the enterprise; un
   - Revview the activities and automatic updates of the runner in the Runner_ files in the _diag folder
   - Review the status of the runner executed in the Worker_ files in the _diag folder
  
+ ### Manage Secrets
  
+ Secrets are encrypted variables that you can use to store sensitive information
+ 
+ - To access secrets in a workflow you need to use the **secrets** context before the secret name ```secrets.secret_name``` in the workflow file
+ - To access secrets in an action you need to make the secret an **input parameter** in the action.yml metadata file.
+ 
+ Organisation Level:
+ 
+ - Secret can be used by anyone in that organisation
+ 
+ Repository Level:
+ 
+ - Secret can be scoped to just the specific repo.
+
+## Maintaining a Secure GitHub Repo
    
+### Best practices
+
+ - To allow developers to report bugs privately you should establish a SECURITY.md file in the root of a repo to provide guidance to developers who identify bugs.
+ - Use a **.gitignore** file to prevent files with sensitive information from being deployed. .gitignore files inherit their settings from parent directories so try to configure a .gitignore at a high level and then cascade down into the project.
+ - **Branch protection rules** - can be used to ensure certain checks are always made when there is a deploymnent to a protected branch. Some uses include:
+  - Run a build to check if the code changes can be built
+  - Run a linter check for typos
+  - Run automated tests
+ - Add a **CODEOWNERS** file to your repo so that you can assign team members or entire teams to be required for any pull requests on changes to the path they are configured for.
+
+### Automated Security
+
+ - Detect and fix outdated dependancies. Can do this by viewing a **repo dependancy graph**.
+  - GitHub scans common package manifests like your package.json or requirements.txt file and then shows all your dependancies visually
+ - Automated dependancy alerts will alert you if you have dependancies which GitHub have detected having vulnerability risks
+ - **Dependabot** creates pull requests to update dependancies to the recommended version
+ - **Automated code scanning** can use CodeQL to query code to check for vulnerabilities
+ - **Secret scanning** woll look for secrets or credentials that have been commited to your code. By default it happens on public repos and can be configured for private repos.
+
+
