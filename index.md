@@ -54,7 +54,7 @@ If using AzureAD, changes in AD will be reflected in GitHub.
 
 ### Organisation level administration
 
-Organisation "owner" permissions allows you to do these activities:
+Organisation "owner" permissions allow you to do these activities:
 - Invite and remove members from an organisation
 - Place users into teams and grant "team maintaner" permissions to users
 - Add or remover external collaborators
@@ -84,36 +84,37 @@ Organisation "owner" permissions allows you to do these activities:
 
 - **SAML SSO** and **MFA (2FA)**
 - SAML SSO:
-  - Before enabling SSO the admin needs to connect the GitHub organisation to a supperted IdP.
+  - Before enabling SSO the admin needs to connect the GitHub organisation to a supported IdP.
   - GitHub redirects a user to the IdP to authenticate when they request access to a resource within an organisation that use SAML SSO
   - The IdP will redirect the member back to GitHub if succesful. They still need to log in to GitHub.
   - Make sure to check the require SAML SSO authentication option in the settings after SSO has been enabled
- - MFA (2FA):
+- MFA (2FA):
   - You must get users to enable the setting on their account and then also at an organisation level, click the require 2FA setting option. Only when both are done will it work properly.
-  - All accounts that do not use 2FA will be removed from the organisation and lose access. Includes bot accounts.
-  - In GitHub Enterprise there are 3 difrenent ways to implement 2FA:
-    - **Security keys** - Needs TOTP or SMS to have already been done initially. Need to configure a key in your settings, can use a physical key over USB or NFC. This is the most secure form of 2FA
-    - **TOTP (Time-based One Time Passcode)** - GitHub recommends using a cloud-based TOTP app.
-    - **SMS** - not supported by GitHub in all countries
+  - All accounts that do not use 2FA will be removed from the organisation and lose access. This includes bot accounts.
+  - In GitHub Enterprise there are 3 difrenent ways to implement 2FA.
+- **Security keys**
+  - Needs TOTP or SMS to have already been done initially. Need to configure a key in your settings, can use a physical key over USB or NFC. This is the most secure form of 2FA
+   - **TOTP (Time-based One Time Passcode)** - GitHub recommends using a cloud-based TOTP app.
+   - **SMS** - not supported by GitHub in all countries
 
 ## GitHub Permissions
 
 ### Repository Permissions
 
 - **Read** For people who need to see the code but not interact with it
-- **Triage** For people who proactively manage issyes amd pull requests but do not need write permissions
+- **Triage** For people who proactively manage issues and pull requests but do not need write permissions
 - **Write** For the standard developer and people who actively contribute to your project
-- **Maintain** For project managers. Does not provide access to sensitive or destruvtive actions
+- **Maintain** For project managers. Does not provide access to sensitive or destructive actions
 - **Admin** For people who need full access to the project
 
 Repository permissions can be be applied to organisation members, external collaborators and teams. 
 
 ### Team permissions
 
-Permissions will cascade through teams that have child teams. Therefore you can apply repository permissions to a parent team that will benfit child teams of that parent. Make sure to only apply the right level of permissions to the parent team and then be more specific with child team permissions.
+Permissions will cascade through teams that have child teams. Therefore you can apply repository permissions to a parent team that will benefit child teams of that parent. Make sure to only apply the right level of permissions to the parent team and then be more specific with child team permissions.
 
 - **Member** Same set of abilites as organisation members
-- **Maintainer** Is a team admin essentially. Abilities include: request team change parent and child teams; edit team discussions; and and remove members; give maintatner permission to other users; manage access to repositories; manage code review assignment and scheduled reminders for pull requests. An organisation owner can also prmote someone to become a maintainer. 
+- **Maintainer** Is a team admin essentially. Abilities include: request team change parent and child teams; edit team discussions; remove members; give maintainer permission to other users; manage access to repositories; manage code review assignment and scheduled reminders for pull requests. An organisation owner can also promote someone to become a maintainer. 
 
 ### Organisation Permissions
 
@@ -137,9 +138,9 @@ This section will run throught the different products that GitHub offers and the
 
 - **GitHub Free** - The GitHub that GitHub is most known for; anyone can create an account and use. Features include:
   - Unlimited public/private repos
-  - 2,000 GitHub Actions/Actions automation minutes per month. Free for public repos
-  - 500MB of GitHub Packages/packages storage. Free for public repos
-  - Two-factor authenitcation
+  - 2,000 GitHub Actions/Actions automation minutes per month. Free for public repos.
+  - 500MB of GitHub Packages/packages storage. Free for public repos.
+  - Two-factor authentication
   - Dependabot alerts
 - **GitHub Pro** - Same as free hut with some updated features. Still uses personal accounts but you get the following advanced features:
   - GitHub support via email
@@ -157,7 +158,7 @@ This section will run throught the different products that GitHub offers and the
   - Draft pull requests
   - Team pull reques reviewers
   - Scheduled reminders
-- **Github Enterprise** - The full works! Can be hosted on-premise or in the GitHub cloud. GH Enterprise includes the following additional:
+- **Github Enterprise** - The full work! Can be hosted on-premise or in the GitHub Cloud. GH Enterprise includes the following additional:
   - GitHub Enterprise Support
   - More security, compliance and deployment controls
   - SAML SSO support
@@ -177,15 +178,15 @@ There are 3 different kinds of accounts for the GitHub products listed:
 
 ### GitHub Actions licensing
 
-- When running GitHub Actions, if you use a windows runner then you are charged double what the minutes are. 
+- When running GitHub Actions, if you use a Windows runner then you are charged double (x2) what the minutes are. 
 - If you are using mac as your runner, you are charged 10x the number of minutes you actually consume. 
-- Linux is 1 to 1. 
+- Linux is 1:1. 
 - You cannot roll over minutes each month.
 
 ### GitHub Packages Licensing
 
 - Storage used is determined by the combination of Actions artifacts and packages. 
-- Storage is calculated based on hourly usage for that month. For example, using 1GB a day for a week would be 1GB * 24hours * 7days then all divided by 744. 
+- Storage is calculated based on hourly usage for that month. For example, using 1GB a day for a week would be 1GB * 24hours * 7days then all divided by 744 (hours per month). 
 - Storage is rounded up to the nearest MB. 
 - Spending limits are default $0 so that you can't overspend unless you raise that limit.
 
@@ -206,8 +207,8 @@ This section will talk about how to manage GitHub Actions for the enterprise; un
 ### Enterprise Level
 
 - Create a **use policy** to prevent people from using dangerous third-party actions.
-- You can choose whether the policy will apply to all your ogranisations or select organisations.
-- You can choose which actions are allowed: if you want select actions then you can filter actions by actions that are created by GitHub or verified marketplace actions. You can also use a wildcard to specifi=y particular actions.
+- You can choose whether the policy will apply to all your organisations or select organisations.
+- You can choose which actions are allowed: if you want select actions then you can filter actions by actions that are created by GitHub or verified marketplace actions. You can also use a wildcard to specifify particular actions.
 
 ### Organisation Level
 
@@ -215,15 +216,15 @@ This section will talk about how to manage GitHub Actions for the enterprise; un
   - Repositories for storage
   - Files/folders naming conventions
   - Location of shared components
-  - Plans fpr ongoing maintanence
+  - Plans for ongoing maintanence
   - Contribution guidelines
  - Create workflow templates
-  - You must create a workflow template in the workflow-templates directory in a piblic .github repo.
+  - You must create a workflow template in the workflow-templates directory *.github* in a public repo.
   - There are 2 steps to create a template.
     1. Create a yml workflow file
     2. Create a json metadata file. This describes how the template should be presented to a user.
-  - The file names must be the same, except for the metadata file it must end in properties.json instead of .yml
-  - Users will be able to find the template you created under the workflows created by your organisation name section in the workflows tab.
+  - The file names must be the same, except for the metadata file it must end in .properties.json instead of .yml
+  - Users will be able to find the template you created under the workflows created by your organisation name section in the workflow tab.
 
 ### Manage Runners
 
