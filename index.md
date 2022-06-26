@@ -233,19 +233,19 @@ This section will talk about how to manage GitHub Actions for the enterprise; un
   - Managed and maintained by GitHub
   - Clean instance for every job execution
   - Use free minutes on your GitHub plan, then per-minute rates.
- - Benefits of Self-hosted runners:
+- Benefits of Self-hosted runners:
   - Automatic updates for the self-hosted runner application only.
   - Can use hardware you've already paid for. Allows for customisable OS, software and security requirements.
-  - Don't need to have a clean insance for every job
-  - Free to use with GitHub Actions, but you are responsible for the cost of your hardware.
- - You can create self-hosted runner groups to apply rules to runners. For example, you can create a group that only containers runners that are allowed to deploy code to production and then only allow certain organisations access to this group.
- - Runners are added to the defauly group when created. They can only be in one group at a time.  
- - You can add custom labels to self-hosted runners. For example, adding a GPU label only to runners that have the correct GPU installed.
- - You must add IP allowlists in organisation settings if you use IP whitelisting and want to be able to use your self-hosted runners.
+  - Don't need to have a clean instance for every job
+  - Free to use GitHub Actions, but you are responsible for the cost of your hardware.
+  - You can create self-hosted runner groups to apply rules to runners; for example, you can create a group that only contains runners that are allowed to deploy code to production and then only allow certain organisations access to this group.
+  - Runners are added to the default group when created. They can only be in one group at a time.  
+  - You can add custom labels to self-hosted runners. For example, adding a GPU label only to runners that have the correct GPU installed.
+  - You must add IP allowlists in organisation settings if you use IP whitelisting and want to be able to use your self-hosted runners.
  - To troubleshoot your self-hosted runners there are a few things you can do
   - Check the status of the runner
-  - Revview the activities and automatic updates of the runner in the Runner_ files in the _diag folder
-  - Review the status of the runner executed in the Worker_ files in the _diag folder
+  - Review the activities and automatic updates of the runner in the Runner _files in the _diag folder
+  - Review the status of the runner executed in the Worker _files in the _diag folder
  
  ### Manage Secrets
  
